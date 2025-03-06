@@ -1,0 +1,45 @@
+{
+  "block.a_palette.white_stained_planks": "White Stained Planks",
+  "block.a_palette.light_gray_stained_planks": "Light Gray Stained Planks",
+  "block.a_palette.gray_stained_planks": "Gray Stained Planks",
+  "block.a_palette.black_stained_planks": "Black Stained Planks",
+  "block.a_palette.brown_stained_planks": "Brown Stained Planks",
+  "block.a_palette.red_stained_planks": "Red Stained Planks",
+  "block.a_palette.orange_stained_planks": "Orange Stained Planks",
+  "block.a_palette.yellow_stained_planks": "Yellow Stained Planks",
+  "block.a_palette.lime_stained_planks": "Lime Stained Planks",
+  "block.a_palette.green_stained_planks": "Green Stained Planks",
+  "block.a_palette.cyan_stained_planks": "Cyan Stained Planks",
+  "block.a_palette.light_blue_stained_planks": "Light Blue Stained Planks",
+  "block.a_palette.blue_stained_planks": "Blue Stained Planks",
+  "block.a_palette.purple_stained_planks": "Purple Stained Planks",
+  "block.a_palette.magenta_stained_planks": "Magenta Stained Planks",
+  "block.a_palette.pink_stained_planks": "Pink Stained Planks",
+
+  "block.a_palette.white_stained_bricks": "White Stained Bricks",
+  "block.a_palette.light_gray_stained_bricks": "Light Gray Stained Bricks",
+  "block.a_palette.gray_stained_bricks": "Gray Stained Bricks",
+  "block.a_palette.black_stained_bricks": "Black Stained Bricks",
+  "block.a_palette.brown_stained_bricks": "Brown Stained Bricks",
+  "block.a_palette.red_stained_bricks": "Red Stained Bricks",
+  "block.a_palette.orange_stained_bricks": "Orange Stained Bricks",
+  "block.a_palette.yellow_stained_bricks": "Yellow Stained Bricks",
+  "block.a_palette.lime_stained_bricks": "Lime Stained Bricks",
+  "block.a_palette.green_stained_bricks": "Green Stained Bricks",
+  "block.a_palette.cyan_stained_bricks": "Cyan Stained Bricks",
+  "block.a_palette.light_blue_stained_bricks": "Light Blue Stained Bricks",
+  "block.a_palette.blue_stained_bricks": "Blue Stained Bricks",
+  "block.a_palette.purple_stained_bricks": "Purple Stained Bricks",
+  "block.a_palette.magenta_stained_bricks": "Magenta Stained Bricks",
+  "block.a_palette.pink_stained_bricks": "Pink Stained Bricks",
+
+
+
+
+
+
+  "block.a_palette.art_palette": "Art Palette",
+
+
+  "creativetab_a_palette": "Andro's Palette"
+}

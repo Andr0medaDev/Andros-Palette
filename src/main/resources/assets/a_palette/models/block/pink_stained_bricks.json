@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "a_palette:block/pink_stained_bricks"
+  }
+}

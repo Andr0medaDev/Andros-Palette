@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YYY",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "tag": "minecraft:planks"
+    },
+    "Y": {
+      "tag": "forge:dyes"
+    }
+  },
+  "result": {
+    "item": "a_palette:art_palette",
+    "count": 1
+  }
+}
+
