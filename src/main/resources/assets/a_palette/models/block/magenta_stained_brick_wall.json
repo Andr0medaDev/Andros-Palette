@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "a_palette:block/magenta_stained_bricks"
+  }
+}
