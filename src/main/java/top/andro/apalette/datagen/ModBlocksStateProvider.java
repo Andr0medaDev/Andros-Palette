@@ -1,14 +1,18 @@
 package top.andro.apalette.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import top.andro.apalette.APalette;
 import top.andro.apalette.init.ModBlocks;
 
-import static net.minecraft.data.models.model.TextureMapping.cubeTop;
+import java.util.Map;
+import java.util.function.Function;
 
 public class ModBlocksStateProvider extends BlockStateProvider {
     public ModBlocksStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -72,6 +76,9 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MAGENTA_STAINED_CLEAR_GLASS);
         blockWithItem(ModBlocks.PINK_STAINED_CLEAR_GLASS);
 
+        //ASPHALT
+        blockWithItem(ModBlocks.WHITE_ASPHALT);
+
 
         paneBlock((IronBarsBlock) ModBlocks.CLEAR_GLASS_PANE.get(),
                 modLoc("block/clear_glass"),        // texture for pane
@@ -125,104 +132,111 @@ public class ModBlocksStateProvider extends BlockStateProvider {
                 modLoc("block/pink_stained_clear_glass"),        // texture for pane
                 modLoc("block/clear_glass_pane_top"));
 
-        stairsBlock((StairBlock) ModBlocks.WHITE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.WHITE_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.WHITE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.WHITE_STAINED_BRICKS.get()), blockTexture(ModBlocks.WHITE_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.WHITE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.WHITE_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.WHITE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.WHITE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.WHITE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.WHITE_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.WHITE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.WHITE_STAINED_BRICKS.get()), blockTexture(ModBlocks.WHITE_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.WHITE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.WHITE_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.WHITE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.WHITE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.LIGHT_GRAY_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.LIGHT_GRAY_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.LIGHT_GRAY_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.LIGHT_GRAY_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.LIGHT_GRAY_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.LIGHT_GRAY_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.LIGHT_GRAY_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.LIGHT_GRAY_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.LIGHT_GRAY_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.LIGHT_GRAY_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.GRAY_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.GRAY_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.GRAY_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.GRAY_STAINED_BRICKS.get()), blockTexture(ModBlocks.GRAY_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.GRAY_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.GRAY_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.GRAY_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.GRAY_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.GRAY_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.GRAY_STAINED_PLANKS.get()), blockTexture(ModBlocks.GRAY_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.GRAY_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.GRAY_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.GRAY_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.GRAY_STAINED_BRICKS.get()), blockTexture(ModBlocks.GRAY_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.GRAY_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.GRAY_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.GRAY_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.GRAY_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.GRAY_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.GRAY_STAINED_PLANKS.get()), blockTexture(ModBlocks.GRAY_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.BLACK_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.BLACK_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.BLACK_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.BLACK_STAINED_BRICKS.get()), blockTexture(ModBlocks.BLACK_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.BLACK_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.BLACK_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.BLACK_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.BLACK_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.BLACK_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.BLACK_STAINED_PLANKS.get()), blockTexture(ModBlocks.BLACK_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.BLACK_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.BLACK_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.BLACK_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.BLACK_STAINED_BRICKS.get()), blockTexture(ModBlocks.BLACK_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.BLACK_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.BLACK_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.BLACK_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.BLACK_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.BLACK_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.BLACK_STAINED_PLANKS.get()), blockTexture(ModBlocks.BLACK_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.BROWN_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.BROWN_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.BROWN_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.BROWN_STAINED_BRICKS.get()), blockTexture(ModBlocks.BROWN_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.BROWN_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.BROWN_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.BROWN_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.BROWN_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.BROWN_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.BROWN_STAINED_PLANKS.get()), blockTexture(ModBlocks.BROWN_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.BROWN_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.BROWN_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.BROWN_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.BROWN_STAINED_BRICKS.get()), blockTexture(ModBlocks.BROWN_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.BROWN_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.BROWN_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.BROWN_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.BROWN_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.BROWN_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.BROWN_STAINED_PLANKS.get()), blockTexture(ModBlocks.BROWN_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.RED_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.RED_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.RED_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.RED_STAINED_BRICKS.get()), blockTexture(ModBlocks.RED_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.RED_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.RED_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.RED_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.RED_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.RED_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.RED_STAINED_PLANKS.get()), blockTexture(ModBlocks.RED_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.RED_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.RED_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.RED_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.RED_STAINED_BRICKS.get()), blockTexture(ModBlocks.RED_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.RED_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.RED_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.RED_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.RED_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.RED_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.RED_STAINED_PLANKS.get()), blockTexture(ModBlocks.RED_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.ORANGE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.ORANGE_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.ORANGE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.ORANGE_STAINED_BRICKS.get()), blockTexture(ModBlocks.ORANGE_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.ORANGE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.ORANGE_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.ORANGE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.ORANGE_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.ORANGE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.ORANGE_STAINED_PLANKS.get()), blockTexture(ModBlocks.ORANGE_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.ORANGE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.ORANGE_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.ORANGE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.ORANGE_STAINED_BRICKS.get()), blockTexture(ModBlocks.ORANGE_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.ORANGE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.ORANGE_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.ORANGE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.ORANGE_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.ORANGE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.ORANGE_STAINED_PLANKS.get()), blockTexture(ModBlocks.ORANGE_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.YELLOW_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.YELLOW_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.YELLOW_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.YELLOW_STAINED_BRICKS.get()), blockTexture(ModBlocks.YELLOW_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.YELLOW_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.YELLOW_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.YELLOW_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.YELLOW_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.YELLOW_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.YELLOW_STAINED_PLANKS.get()), blockTexture(ModBlocks.YELLOW_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.YELLOW_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.YELLOW_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.YELLOW_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.YELLOW_STAINED_BRICKS.get()), blockTexture(ModBlocks.YELLOW_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.YELLOW_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.YELLOW_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.YELLOW_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.YELLOW_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.YELLOW_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.YELLOW_STAINED_PLANKS.get()), blockTexture(ModBlocks.YELLOW_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.LIME_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.LIME_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.LIME_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.LIME_STAINED_BRICKS.get()), blockTexture(ModBlocks.LIME_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.LIME_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.LIME_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.LIME_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.LIME_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.LIME_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.LIME_STAINED_PLANKS.get()), blockTexture(ModBlocks.LIME_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.LIME_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.LIME_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.LIME_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.LIME_STAINED_BRICKS.get()), blockTexture(ModBlocks.LIME_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.LIME_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.LIME_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.LIME_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.LIME_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.LIME_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.LIME_STAINED_PLANKS.get()), blockTexture(ModBlocks.LIME_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.GREEN_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.GREEN_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.GREEN_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.GREEN_STAINED_BRICKS.get()), blockTexture(ModBlocks.GREEN_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.GREEN_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.GREEN_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.GREEN_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.GREEN_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.GREEN_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.GREEN_STAINED_PLANKS.get()), blockTexture(ModBlocks.GREEN_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.GREEN_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.GREEN_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.GREEN_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.GREEN_STAINED_BRICKS.get()), blockTexture(ModBlocks.GREEN_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.GREEN_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.GREEN_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.GREEN_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.GREEN_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.GREEN_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.GREEN_STAINED_PLANKS.get()), blockTexture(ModBlocks.GREEN_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.CYAN_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.CYAN_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.CYAN_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.CYAN_STAINED_BRICKS.get()), blockTexture(ModBlocks.CYAN_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.CYAN_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.CYAN_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.CYAN_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.CYAN_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.CYAN_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.CYAN_STAINED_PLANKS.get()), blockTexture(ModBlocks.CYAN_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.CYAN_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.CYAN_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.CYAN_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.CYAN_STAINED_BRICKS.get()), blockTexture(ModBlocks.CYAN_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.CYAN_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.CYAN_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.CYAN_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.CYAN_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.CYAN_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.CYAN_STAINED_PLANKS.get()), blockTexture(ModBlocks.CYAN_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.LIGHT_BLUE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.LIGHT_BLUE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.LIGHT_BLUE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.LIGHT_BLUE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.LIGHT_BLUE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.LIGHT_BLUE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.LIGHT_BLUE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.LIGHT_BLUE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.LIGHT_BLUE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.LIGHT_BLUE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.BLUE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.BLUE_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.BLUE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.BLUE_STAINED_BRICKS.get()), blockTexture(ModBlocks.BLUE_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.BLUE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.BLUE_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.BLUE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.BLUE_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.BLUE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.BLUE_STAINED_PLANKS.get()), blockTexture(ModBlocks.BLUE_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.BLUE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.BLUE_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.BLUE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.BLUE_STAINED_BRICKS.get()), blockTexture(ModBlocks.BLUE_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.BLUE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.BLUE_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.BLUE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.BLUE_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.BLUE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.BLUE_STAINED_PLANKS.get()), blockTexture(ModBlocks.BLUE_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.PURPLE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.PURPLE_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.PURPLE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.PURPLE_STAINED_BRICKS.get()), blockTexture(ModBlocks.PURPLE_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.PURPLE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.PURPLE_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.PURPLE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.PURPLE_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.PURPLE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.PURPLE_STAINED_PLANKS.get()), blockTexture(ModBlocks.PURPLE_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.PURPLE_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.PURPLE_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.PURPLE_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.PURPLE_STAINED_BRICKS.get()), blockTexture(ModBlocks.PURPLE_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.PURPLE_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.PURPLE_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.PURPLE_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.PURPLE_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.PURPLE_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.PURPLE_STAINED_PLANKS.get()), blockTexture(ModBlocks.PURPLE_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.MAGENTA_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.MAGENTA_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.MAGENTA_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.MAGENTA_STAINED_BRICKS.get()), blockTexture(ModBlocks.MAGENTA_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.MAGENTA_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.MAGENTA_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.MAGENTA_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.MAGENTA_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.MAGENTA_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.MAGENTA_STAINED_PLANKS.get()), blockTexture(ModBlocks.MAGENTA_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.MAGENTA_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.MAGENTA_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.MAGENTA_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.MAGENTA_STAINED_BRICKS.get()), blockTexture(ModBlocks.MAGENTA_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.MAGENTA_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.MAGENTA_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.MAGENTA_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.MAGENTA_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.MAGENTA_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.MAGENTA_STAINED_PLANKS.get()), blockTexture(ModBlocks.MAGENTA_STAINED_PLANKS.get()));;
 
-        stairsBlock((StairBlock) ModBlocks.PINK_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.PINK_STAINED_BRICKS.get()));
-        slabBlock((SlabBlock) ModBlocks.PINK_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.PINK_STAINED_BRICKS.get()), blockTexture(ModBlocks.PINK_STAINED_BRICKS.get()));
-        wallBlock((WallBlock) ModBlocks.PINK_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.PINK_STAINED_BRICKS.get()));
-        stairsBlock((StairBlock) ModBlocks.PINK_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()));
-        slabBlock((SlabBlock) ModBlocks.PINK_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.PINK_STAINED_BRICK_STAIRS.get(), blockTexture(ModBlocks.PINK_STAINED_BRICKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.PINK_STAINED_BRICK_SLAB.get(), blockTexture(ModBlocks.PINK_STAINED_BRICKS.get()), blockTexture(ModBlocks.PINK_STAINED_BRICKS.get()));;
+        wallBlock((WallBlock) ModBlocks.PINK_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.PINK_STAINED_BRICKS.get()));;
+        stairsBlock((StairBlock) ModBlocks.PINK_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()));;
+        slabBlock((SlabBlock) ModBlocks.PINK_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()));;
+    }
+    private void blockWithItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));;
     }
 
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    private void blockItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("a_palette:block/" + deferredBlock.getId().getPath()));
+    }
+
+    private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("a_palette:block/" + deferredBlock.getId().getPath() + appendix));
     }
 }

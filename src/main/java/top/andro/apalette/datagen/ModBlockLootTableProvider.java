@@ -1,18 +1,21 @@
-package top.andro.apalette.datagen.loot;
+package top.andro.apalette.datagen;
 
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.Holder;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import top.andro.apalette.init.ModBlocks;
 
+import java.util.List;
 import java.util.Set;
 
-public class ModBlockLootTables extends BlockLootSubProvider {
-    public ModBlockLootTables() {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+public class ModBlockLootTableProvider extends BlockLootSubProvider {
+    protected ModBlockLootTableProvider(HolderLookup.Provider registries) {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
     }
 
     @Override
@@ -26,6 +29,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WHITE_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.WHITE_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.WHITE_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.WHITE_ASPHALT.get());
         //LIGHT_GRAY
         this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_BRICK_STAIRS.get());
@@ -151,8 +155,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     }
 
+
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
     }
 }

@@ -1,0 +1,23 @@
+modLoader="javafml" #mandatory
+loaderVersion="20," #mandatory
+license="GNU GPLv3"
+
+[[mods]] #mandatory
+modId="a_palette" #mandatory
+version="0.1.0-1.21.1" #mandatory
+displayName="Andro's Palette" #mandatory
+authors="Andro" #optional
+description='''Simple Minecraft Mod aiming to expand Block Palettes in Building!'''
+
+[[dependencies.a_palette]] #optional
+modId="neoforge" #mandatory
+type="required" #mandatory
+versionRange="${neo_version_range}" #mandatory
+ordering="NONE"
+side="BOTH"
+[[dependencies.a_palette]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"

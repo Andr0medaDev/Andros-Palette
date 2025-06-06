@@ -4,31 +4,19 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import org.slf4j.Logger;
 import top.andro.apalette.init.ModBlocks;
 import top.andro.apalette.init.ModCreativeModeTabs;
@@ -36,23 +24,19 @@ import top.andro.apalette.init.ModItems;
 
 import java.util.List;
 
+
 @Mod(APalette.MOD_ID)
 public class APalette {
     public static final String MOD_ID = "a_palette";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-
-    public APalette() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public APalette(IEventBus modEventBus, ModContainer modContainer) {
+        modEventBus.addListener(this::commonSetup);
+        NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
-
-        modEventBus.addListener(this::commonSetup);
-
-        MinecraftForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -65,58 +49,90 @@ public class APalette {
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("Hello! Thank you for choosing to use Andro's Palette! Feel free to ask Questions or Suggest stuff! You can send them in the Discord Server, or DM me @_andromeda07 on Discord!");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
-            List<Block> translucentBlocks = List.of(
-                    ModBlocks.CLEAR_GLASS.get(),
-                    ModBlocks.CLEAR_GLASS_PANE.get(),
-                    ModBlocks.WHITE_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.WHITE_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.GRAY_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.GRAY_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.BLACK_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.BLACK_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.BROWN_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.BROWN_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.RED_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.RED_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.ORANGE_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.ORANGE_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.YELLOW_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.YELLOW_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.LIME_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.LIME_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.GREEN_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.GREEN_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.CYAN_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.CYAN_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.BLUE_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.BLUE_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.PURPLE_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.PURPLE_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.MAGENTA_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.MAGENTA_STAINED_CLEAR_GLASS_PANE.get(),
-                    ModBlocks.PINK_STAINED_CLEAR_GLASS.get(),
-                    ModBlocks.PINK_STAINED_CLEAR_GLASS_PANE.get()
+            List<DeferredBlock<Block>> translucentBlocks = List.of(
+                    ModBlocks.CLEAR_GLASS,
+                    ModBlocks.CLEAR_GLASS_PANE,
+                    ModBlocks.WHITE_STAINED_CLEAR_GLASS,
+                    ModBlocks.WHITE_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS,
+                    ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.GRAY_STAINED_CLEAR_GLASS,
+                    ModBlocks.GRAY_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.BLACK_STAINED_CLEAR_GLASS,
+                    ModBlocks.BLACK_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.BROWN_STAINED_CLEAR_GLASS,
+                    ModBlocks.BROWN_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.RED_STAINED_CLEAR_GLASS,
+                    ModBlocks.RED_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.ORANGE_STAINED_CLEAR_GLASS,
+                    ModBlocks.ORANGE_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.YELLOW_STAINED_CLEAR_GLASS,
+                    ModBlocks.YELLOW_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.LIME_STAINED_CLEAR_GLASS,
+                    ModBlocks.LIME_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.GREEN_STAINED_CLEAR_GLASS,
+                    ModBlocks.GREEN_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.CYAN_STAINED_CLEAR_GLASS,
+                    ModBlocks.CYAN_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS,
+                    ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.BLUE_STAINED_CLEAR_GLASS,
+                    ModBlocks.BLUE_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.PURPLE_STAINED_CLEAR_GLASS,
+                    ModBlocks.PURPLE_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.MAGENTA_STAINED_CLEAR_GLASS,
+                    ModBlocks.MAGENTA_STAINED_CLEAR_GLASS_PANE,
+                    ModBlocks.PINK_STAINED_CLEAR_GLASS,
+                    ModBlocks.PINK_STAINED_CLEAR_GLASS_PANE
 
 
             );
 
-            for (Block block : translucentBlocks) {
-                ItemBlockRenderTypes.setRenderLayer(block, RenderType.translucent());
+            for (DeferredBlock<Block> block : translucentBlocks) {
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAY_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAY_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.BROWN_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.BROWN_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.ORANGE_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.ORANGE_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.YELLOW_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.YELLOW_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIME_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIME_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYAN_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYAN_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGENTA_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGENTA_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_STAINED_CLEAR_GLASS.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_STAINED_CLEAR_GLASS_PANE.get(), RenderType.translucent());
+
             }
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");

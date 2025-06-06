@@ -1,28 +1,24 @@
 package top.andro.apalette.datagen;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import top.andro.apalette.APalette;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import top.andro.apalette.init.ModBlocks;
 
-import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    public ModRecipeProvider(PackOutput pOutput) {
-        super(pOutput);
+    public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+        super(output, registries);
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+    protected void buildRecipes(RecipeOutput recipeOutput) {
         // WHITE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -31,28 +27,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.WHITE_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.WHITE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.WHITE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.WHITE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.WHITE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.WHITE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.WHITE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.WHITE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -60,21 +56,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.WHITE_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.WHITE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.WHITE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.WHITE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.WHITE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -82,15 +78,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.WHITE_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.WHITE_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.WHITE_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
         // LIGHT_GRAY
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -99,28 +94,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.LIGHT_GRAY_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -128,21 +123,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.LIGHT_GRAY_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -150,15 +145,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.LIGHT_GRAY_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // GRAY
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -167,28 +161,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.GRAY_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.GRAY_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.GRAY_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.GRAY_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.GRAY_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.GRAY_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.GRAY_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.GRAY_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -196,21 +190,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.GRAY_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.GRAY_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.GRAY_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.GRAY_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.GRAY_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -218,15 +212,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.GRAY_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.GRAY_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.GRAY_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // BLACK
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -235,28 +228,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.BLACK_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.BLACK_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLACK_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.BLACK_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLACK_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.BLACK_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLACK_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.BLACK_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -264,21 +257,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.BLACK_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLACK_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.BLACK_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLACK_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.BLACK_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -286,15 +279,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.BLACK_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLACK_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.BLACK_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // BROWN
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -303,28 +295,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.BROWN_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.BROWN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BROWN_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.BROWN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BROWN_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.BROWN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.BROWN_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.BROWN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -332,21 +324,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.BROWN_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BROWN_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.BROWN_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BROWN_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.BROWN_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -354,15 +346,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.BROWN_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.BROWN_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.BROWN_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // RED
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -371,28 +362,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.RED_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.RED_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.RED_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.RED_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.RED_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.RED_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.RED_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.RED_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -400,21 +391,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.RED_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.RED_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.RED_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.RED_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.RED_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -422,15 +413,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.RED_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.RED_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.RED_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // ORANGE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -439,28 +429,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.ORANGE_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.ORANGE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.ORANGE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.ORANGE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.ORANGE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.ORANGE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.ORANGE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.ORANGE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -468,21 +458,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.ORANGE_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.ORANGE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.ORANGE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.ORANGE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.ORANGE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -490,15 +480,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.ORANGE_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.ORANGE_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.ORANGE_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // YELLOW
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -507,28 +496,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.YELLOW_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.YELLOW_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.YELLOW_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.YELLOW_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.YELLOW_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.YELLOW_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.YELLOW_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.YELLOW_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -536,21 +525,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.YELLOW_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.YELLOW_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.YELLOW_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.YELLOW_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.YELLOW_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -558,15 +547,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.YELLOW_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.YELLOW_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.YELLOW_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // LIME
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -575,28 +563,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.LIME_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.LIME_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIME_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.LIME_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIME_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.LIME_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIME_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.LIME_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -604,21 +592,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.LIME_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIME_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.LIME_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIME_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.LIME_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -626,15 +614,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.LIME_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIME_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.LIME_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // GREEN
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -643,28 +630,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.GREEN_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.GREEN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.GREEN_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.GREEN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.GREEN_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.GREEN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.GREEN_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.GREEN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -672,21 +659,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.GREEN_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.GREEN_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.GREEN_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.GREEN_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.GREEN_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -694,14 +681,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.GREEN_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.GREEN_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.GREEN_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
 
 // CYAN
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_STAINED_BRICKS.get(), 8)
@@ -711,28 +698,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.CYAN_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.CYAN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.CYAN_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.CYAN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.CYAN_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.CYAN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.CYAN_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.CYAN_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -740,21 +727,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.CYAN_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.CYAN_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.CYAN_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.CYAN_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.CYAN_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -762,15 +749,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.CYAN_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.CYAN_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.CYAN_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // LIGHT_BLUE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -779,28 +765,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.LIGHT_BLUE_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -808,21 +794,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.LIGHT_BLUE_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -830,16 +816,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.LIGHT_BLUE_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
-// BLUE
+                .save(recipeOutput);
+        // BLUE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -847,28 +832,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.BLUE_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.BLUE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLUE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.BLUE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLUE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.BLUE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLUE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.BLUE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -876,21 +861,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.BLUE_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLUE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.BLUE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLUE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.BLUE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -898,16 +883,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.BLUE_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.BLUE_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.BLUE_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
-// PURPLE
+                .save(recipeOutput);
+        // PURPLE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -915,28 +899,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.PURPLE_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.PURPLE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.PURPLE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.PURPLE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.PURPLE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.PURPLE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.PURPLE_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.PURPLE_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -944,21 +928,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.PURPLE_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.PURPLE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.PURPLE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.PURPLE_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.PURPLE_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -966,15 +950,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.PURPLE_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.PURPLE_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.PURPLE_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // MAGENTA
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -983,28 +966,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.MAGENTA_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.MAGENTA_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.MAGENTA_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.MAGENTA_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.MAGENTA_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.MAGENTA_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.MAGENTA_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.MAGENTA_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -1012,21 +995,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.MAGENTA_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.MAGENTA_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.MAGENTA_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.MAGENTA_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.MAGENTA_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -1034,15 +1017,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.MAGENTA_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.MAGENTA_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.MAGENTA_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
-
+                .save(recipeOutput);
 // PINK
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_STAINED_BRICKS.get(), 8)
                 .pattern("XXX")
@@ -1051,28 +1033,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', Blocks.BRICKS)
                 .define('Y', Items.PINK_DYE)
                 .unlockedBy("has_bricks", has(ModBlocks.PINK_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_STAINED_BRICK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.PINK_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.PINK_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_STAINED_BRICK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.PINK_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.PINK_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_STAINED_BRICK_WALL.get(), 6)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.PINK_STAINED_BRICKS.get())
                 .unlockedBy("has_bricks", has(ModBlocks.PINK_STAINED_BRICKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_STAINED_PLANKS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -1080,21 +1062,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ItemTags.PLANKS)
                 .define('Y', Items.PINK_DYE)
                 .unlockedBy("has_planks", has(ItemTags.PLANKS))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_STAINED_PLANK_STAIRS.get(), 4)
                 .pattern("X  ")
                 .pattern("XX ")
                 .pattern("XXX")
                 .define('X', ModBlocks.PINK_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.PINK_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_STAINED_PLANK_SLAB.get(), 6)
                 .pattern("   ")
                 .pattern("   ")
                 .pattern("XXX")
                 .define('X', ModBlocks.PINK_STAINED_PLANKS.get())
                 .unlockedBy("has_planks", has(ModBlocks.PINK_STAINED_PLANKS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_STAINED_CLEAR_GLASS.get(), 8)
                 .pattern("XXX")
                 .pattern("XYX")
@@ -1102,14 +1084,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModBlocks.CLEAR_GLASS.get())
                 .define('Y', Items.PINK_DYE)
                 .unlockedBy("has_clear_glass", has(ModBlocks.CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_STAINED_CLEAR_GLASS_PANE.get(), 16)
                 .pattern("   ")
                 .pattern("XXX")
                 .pattern("XXX")
                 .define('X', ModBlocks.PINK_STAINED_CLEAR_GLASS.get())
                 .unlockedBy("has_clear_glass", has(ModBlocks.PINK_STAINED_CLEAR_GLASS.get()))
-                .save(pWriter);
+                .save(recipeOutput);
 
 
     }
