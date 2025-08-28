@@ -19,8 +19,6 @@ public class ModBlocksStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         blockWithItem(ModBlocks.WHITE_STAINED_BRICKS);
-        blockWithItem(ModBlocks.WHITE_STAINED_PLANKS);
-
         blockWithItem(ModBlocks.LIGHT_GRAY_STAINED_BRICKS);
         blockWithItem(ModBlocks.GRAY_STAINED_BRICKS);
         blockWithItem(ModBlocks.BLACK_STAINED_BRICKS);
@@ -37,7 +35,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MAGENTA_STAINED_BRICKS);
         blockWithItem(ModBlocks.PINK_STAINED_BRICKS);
         //PLANKS
-
+        blockWithItem(ModBlocks.WHITE_STAINED_PLANKS);
         blockWithItem(ModBlocks.LIGHT_GRAY_STAINED_PLANKS);
         blockWithItem(ModBlocks.GRAY_STAINED_PLANKS);
         blockWithItem(ModBlocks.BLACK_STAINED_PLANKS);
@@ -71,6 +69,40 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PURPLE_STAINED_CLEAR_GLASS);
         blockWithItem(ModBlocks.MAGENTA_STAINED_CLEAR_GLASS);
         blockWithItem(ModBlocks.PINK_STAINED_CLEAR_GLASS);
+        //SIDING (BORDERED)
+        blockWithItem(ModBlocks.WHITE_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.LIGHT_GRAY_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.GRAY_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.BLACK_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.BROWN_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.RED_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.ORANGE_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.YELLOW_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.LIME_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.GREEN_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.CYAN_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.LIGHT_BLUE_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.BLUE_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.PURPLE_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.MAGENTA_STAINED_BORDERED_SIDING);
+        blockWithItem(ModBlocks.PINK_STAINED_BORDERED_SIDING);
+        //SIDING
+        blockWithItem(ModBlocks.WHITE_STAINED_SIDING);
+        blockWithItem(ModBlocks.LIGHT_GRAY_STAINED_SIDING);
+        blockWithItem(ModBlocks.GRAY_STAINED_SIDING);
+        blockWithItem(ModBlocks.BLACK_STAINED_SIDING);
+        blockWithItem(ModBlocks.BROWN_STAINED_SIDING);
+        blockWithItem(ModBlocks.RED_STAINED_SIDING);
+        blockWithItem(ModBlocks.ORANGE_STAINED_SIDING);
+        blockWithItem(ModBlocks.YELLOW_STAINED_SIDING);
+        blockWithItem(ModBlocks.LIME_STAINED_SIDING);
+        blockWithItem(ModBlocks.GREEN_STAINED_SIDING);
+        blockWithItem(ModBlocks.CYAN_STAINED_SIDING);
+        blockWithItem(ModBlocks.LIGHT_BLUE_STAINED_SIDING);
+        blockWithItem(ModBlocks.BLUE_STAINED_SIDING);
+        blockWithItem(ModBlocks.PURPLE_STAINED_SIDING);
+        blockWithItem(ModBlocks.MAGENTA_STAINED_SIDING);
+        blockWithItem(ModBlocks.PINK_STAINED_SIDING);
 
 
         paneBlock((IronBarsBlock) ModBlocks.CLEAR_GLASS_PANE.get(),
@@ -220,6 +252,59 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         wallBlock((WallBlock) ModBlocks.PINK_STAINED_BRICK_WALL.get(), blockTexture(ModBlocks.PINK_STAINED_BRICKS.get()));
         stairsBlock((StairBlock) ModBlocks.PINK_STAINED_PLANK_STAIRS.get(), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()));
         slabBlock((SlabBlock) ModBlocks.PINK_STAINED_PLANK_SLAB.get(), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()));
+
+        /*buttonBlock((ButtonBlock) ModBlocks.WHITE_STAINED_BUTTON.get(), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.WHITE_STAINED_PRESSURE_PLATE.get(), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()));*/
+
+        fenceBlock((FenceBlock) ModBlocks.WHITE_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.WHITE_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.WHITE_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.LIGHT_GRAY_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.LIGHT_GRAY_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.GRAY_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.GRAY_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.GRAY_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.GRAY_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.BLACK_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.BLACK_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.BLACK_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.BLACK_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.BROWN_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.BROWN_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.BROWN_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.BROWN_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.RED_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.RED_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.RED_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.RED_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.ORANGE_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.ORANGE_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.ORANGE_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.ORANGE_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.YELLOW_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.YELLOW_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.YELLOW_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.YELLOW_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.LIME_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.LIME_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.LIME_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.LIME_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.GREEN_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.GREEN_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.GREEN_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.GREEN_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.CYAN_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.CYAN_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.CYAN_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.CYAN_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.LIGHT_BLUE_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.LIGHT_BLUE_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.BLUE_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.BLUE_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.BLUE_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.BLUE_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.PURPLE_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.PURPLE_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.PURPLE_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.PURPLE_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.MAGENTA_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.MAGENTA_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.MAGENTA_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.MAGENTA_STAINED_PLANKS.get()));
+
+        fenceBlock((FenceBlock) ModBlocks.PINK_STAINED_PLANK_FENCE.get(), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.PINK_STAINED_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.PINK_STAINED_PLANKS.get()));
+
+
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

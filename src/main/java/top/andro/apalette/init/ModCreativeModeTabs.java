@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, APalette.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> A_PALETTE = CREATIVE_MODE_TABS.register("a_palette",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.STONECUTTER))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ART_PALETTE.get()))
                     .title(Component.translatable("creativetab_a_palette"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.ART_PALETTE.get());

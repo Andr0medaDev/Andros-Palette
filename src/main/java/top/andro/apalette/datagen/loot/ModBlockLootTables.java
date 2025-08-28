@@ -26,6 +26,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WHITE_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.WHITE_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.WHITE_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.WHITE_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.WHITE_STAINED_PLANK_FENCE_GATE.get());
         //LIGHT_GRAY
         this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_BRICK_STAIRS.get());
@@ -34,6 +36,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_PLANK_FENCE_GATE.get());
         //GRAY
         this.dropSelf(ModBlocks.GRAY_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.GRAY_STAINED_BRICK_STAIRS.get());
@@ -42,6 +46,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.GRAY_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.GRAY_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.GRAY_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.GRAY_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.GRAY_STAINED_PLANK_FENCE_GATE.get());
 
         //BLACK
         this.dropSelf(ModBlocks.BLACK_STAINED_BRICKS.get());
@@ -51,6 +57,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BLACK_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.BLACK_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.BLACK_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.BLACK_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.BLACK_STAINED_PLANK_FENCE_GATE.get());
 
         //BROWN
         this.dropSelf(ModBlocks.BROWN_STAINED_BRICKS.get());
@@ -60,6 +68,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BROWN_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.BROWN_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.BROWN_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.BROWN_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.BROWN_STAINED_PLANK_FENCE_GATE.get());
         //RED
         this.dropSelf(ModBlocks.RED_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.RED_STAINED_BRICK_STAIRS.get());
@@ -68,6 +78,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RED_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.RED_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.RED_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.RED_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.RED_STAINED_PLANK_FENCE_GATE.get());
         //ORANGE
         this.dropSelf(ModBlocks.ORANGE_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.ORANGE_STAINED_BRICK_STAIRS.get());
@@ -76,6 +88,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ORANGE_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.ORANGE_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.ORANGE_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.ORANGE_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.ORANGE_STAINED_PLANK_FENCE_GATE.get());
         //YELLOW
         this.dropSelf(ModBlocks.YELLOW_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.YELLOW_STAINED_BRICK_STAIRS.get());
@@ -84,6 +98,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.YELLOW_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.YELLOW_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.YELLOW_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.YELLOW_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.YELLOW_STAINED_PLANK_FENCE_GATE.get());
         //LIME
         this.dropSelf(ModBlocks.LIME_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.LIME_STAINED_BRICK_STAIRS.get());
@@ -92,6 +108,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIME_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.LIME_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.LIME_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.LIME_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.LIME_STAINED_PLANK_FENCE_GATE.get());
         //GREEN
         this.dropSelf(ModBlocks.GREEN_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.GREEN_STAINED_BRICK_STAIRS.get());
@@ -100,6 +118,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.GREEN_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.GREEN_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.GREEN_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.GREEN_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.GREEN_STAINED_PLANK_FENCE_GATE.get());
         //CYAN
         this.dropSelf(ModBlocks.CYAN_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.CYAN_STAINED_BRICK_STAIRS.get());
@@ -108,6 +128,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CYAN_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.CYAN_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.CYAN_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.CYAN_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.CYAN_STAINED_PLANK_FENCE_GATE.get());
         //LIGHT_BLUE
         this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_BRICK_STAIRS.get());
@@ -116,6 +138,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_PLANK_FENCE_GATE.get());
         //BLUE
         this.dropSelf(ModBlocks.BLUE_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.BLUE_STAINED_BRICK_STAIRS.get());
@@ -124,6 +148,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BLUE_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.BLUE_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.BLUE_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.BLUE_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.BLUE_STAINED_PLANK_FENCE_GATE.get());
         //PURPLE
         this.dropSelf(ModBlocks.PURPLE_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.PURPLE_STAINED_BRICK_STAIRS.get());
@@ -132,6 +158,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PURPLE_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.PURPLE_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.PURPLE_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.PURPLE_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.PURPLE_STAINED_PLANK_FENCE_GATE.get());
         //MAGENTA
         this.dropSelf(ModBlocks.MAGENTA_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.MAGENTA_STAINED_BRICK_STAIRS.get());
@@ -140,6 +168,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.MAGENTA_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.MAGENTA_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.MAGENTA_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.MAGENTA_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.MAGENTA_STAINED_PLANK_FENCE_GATE.get());
         //PINK
         this.dropSelf(ModBlocks.PINK_STAINED_BRICKS.get());
         this.dropSelf(ModBlocks.PINK_STAINED_BRICK_STAIRS.get());
@@ -148,6 +178,44 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PINK_STAINED_PLANKS.get());
         this.dropSelf(ModBlocks.PINK_STAINED_PLANK_STAIRS.get());
         this.dropSelf(ModBlocks.PINK_STAINED_PLANK_SLAB.get());
+        this.dropSelf(ModBlocks.PINK_STAINED_PLANK_FENCE.get());
+        this.dropSelf(ModBlocks.PINK_STAINED_PLANK_FENCE_GATE.get());
+
+        //SIDING (BORDERED)
+        this.dropSelf(ModBlocks.WHITE_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.GRAY_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.BLACK_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.BROWN_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.RED_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.ORANGE_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.YELLOW_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.LIME_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.GREEN_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.CYAN_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.BLUE_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.PURPLE_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.MAGENTA_STAINED_BORDERED_SIDING.get());
+        this.dropSelf(ModBlocks.PINK_STAINED_BORDERED_SIDING.get());
+
+        //SIDING
+        this.dropSelf(ModBlocks.WHITE_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.GRAY_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.BLACK_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.BROWN_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.RED_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.ORANGE_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.YELLOW_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.LIME_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.GREEN_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.CYAN_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.BLUE_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.PURPLE_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.MAGENTA_STAINED_SIDING.get());
+        this.dropSelf(ModBlocks.PINK_STAINED_SIDING.get());
 
     }
 
