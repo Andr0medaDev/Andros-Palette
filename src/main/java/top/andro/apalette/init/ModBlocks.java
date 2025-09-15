@@ -138,7 +138,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRIPPED_LIME_STAINED_LOG = registerBlock("stripped_lime_stained_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_GREEN_STAINED_LOG = registerBlock("stripped_green_stained_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_CYAN_STAINED_LOG = registerBlock("stripped_cyan_stained_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-    public static final RegistryObject<Block> STRIPPED_LIGHT_BLUE_STAINED_LOG = registerBlock("stripped_light_blue_stained_log", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_LIGHT_BLUE_STAINED_LOG = registerBlock("stripped_light_blue_stained_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_BLUE_STAINED_LOG = registerBlock("stripped_blue_stained_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_PURPLE_STAINED_LOG = registerBlock("stripped_purple_stained_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_MAGENTA_STAINED_LOG = registerBlock("stripped_magenta_stained_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));

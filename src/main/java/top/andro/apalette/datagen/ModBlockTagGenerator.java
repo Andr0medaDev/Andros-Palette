@@ -222,5 +222,22 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_MAGENTA_STAINED_WOOD.get())
                 .add(ModBlocks.STRIPPED_PINK_STAINED_WOOD.get());
 
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.WHITE_STAINED_PLANKS.get())
+                .add(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get())
+                .add(ModBlocks.GRAY_STAINED_PLANKS.get())
+                .add(ModBlocks.BLACK_STAINED_PLANKS.get())
+                .add(ModBlocks.BROWN_STAINED_PLANKS.get())
+                .add(ModBlocks.RED_STAINED_PLANKS.get())
+                .add(ModBlocks.ORANGE_STAINED_PLANKS.get())
+                .add(ModBlocks.YELLOW_STAINED_PLANKS.get())
+                .add(ModBlocks.LIME_STAINED_PLANKS.get())
+                .add(ModBlocks.CYAN_STAINED_PLANKS.get())
+                .add(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get())
+                .add(ModBlocks.BLUE_STAINED_PLANKS.get())
+                .add(ModBlocks.PURPLE_STAINED_PLANKS.get())
+                .add(ModBlocks.MAGENTA_STAINED_PLANKS.get())
+                .add(ModBlocks.PINK_STAINED_PLANKS.get());
+
     }
 }

@@ -246,7 +246,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_PLANK_BUTTON.get());
         this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_LOG.get());
         this.dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOOD.get());
-        //this.dropSelf(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_WOOD.get());
 
         //BLUE

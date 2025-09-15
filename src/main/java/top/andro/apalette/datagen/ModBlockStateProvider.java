@@ -408,7 +408,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.MAGENTA_STAINED_PLANK_TRAPDOOR);
         blockItem(ModBlocks.PINK_STAINED_PLANK_TRAPDOOR);
 
-        logBlock(((RotatedPillarBlock) ModBlocks.WHITE_STAINED_LOG.get()));
+        logBlock((RotatedPillarBlock) ModBlocks.WHITE_STAINED_LOG.get());
         logBlock(((RotatedPillarBlock) ModBlocks.LIGHT_GRAY_STAINED_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.GRAY_STAINED_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.BLACK_STAINED_LOG.get()));
@@ -524,7 +524,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_LIME_STAINED_LOG);
         blockItem(ModBlocks.STRIPPED_GREEN_STAINED_LOG);
         blockItem(ModBlocks.STRIPPED_CYAN_STAINED_LOG);
-        //blockItem(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_LOG);
+        blockItem(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_LOG);
         blockItem(ModBlocks.STRIPPED_BLUE_STAINED_LOG);
         blockItem(ModBlocks.STRIPPED_PURPLE_STAINED_LOG);
         blockItem(ModBlocks.STRIPPED_MAGENTA_STAINED_LOG);
