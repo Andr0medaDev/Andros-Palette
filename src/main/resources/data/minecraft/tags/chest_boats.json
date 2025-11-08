@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "a_palette:white_stained_chest_boat",
+    "a_palette:light_gray_stained_chest_boat",
+    "a_palette:gray_stained_chest_boat",
+    "a_palette:black_stained_chest_boat",
+    "a_palette:brown_stained_chest_boat",
+    "a_palette:red_stained_chest_boat",
+    "a_palette:orange_stained_chest_boat",
+    "a_palette:yellow_stained_chest_boat",
+    "a_palette:lime_stained_chest_boat",
+    "a_palette:green_stained_chest_boat",
+    "a_palette:cyan_stained_chest_boat",
+    "a_palette:light_blue_stained_chest_boat",
+    "a_palette:blue_boat_stained_chest_boat",
+    "a_palette:purple_stained_chest_boat",
+    "a_palette:magenta_stained_chest_boat",
+    "a_palette:pink_stained_chest_boat"
+  ]
+}
