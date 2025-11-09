@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:light_gray_stained_planks"
+    }
+  },
+  "result": {
+    "item": "a_palette:light_gray_stained_wooden_trapdoor",
+    "count": 2
+  }
+}
+

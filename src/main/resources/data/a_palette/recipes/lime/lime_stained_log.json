@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "tag": "minecraft:logs"
+    },
+    "Y": {
+      "item": "minecraft:lime_dye"
+    },
+    "result": {
+      "item": "a_palette:lime_stained_log",
+      "count": 8
+    }
+  }
+}
+

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:white_stained_log"
+    },
+    "result": {
+      "item": "a_palette:white_stained_wood",
+      "count": 3
+    }
+  }
+}
+

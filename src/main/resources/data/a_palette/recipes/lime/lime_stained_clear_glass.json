@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "a_palette:clear_glass"
+    },
+    "Y": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "result": {
+    "count": 8,
+    "item": "a_palette:lime_stained_clear_glass"
+  },
+  "show_notification": true
+}

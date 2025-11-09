@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "a_palette:modern_glass"
+    },
+    "Y": {
+      "item": "minecraft:pink_dye"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "result": {
+    "count": 8,
+    "item": "a_palette:pink_stained_modern_glass"
+  },
+  "show_notification": true
+}
