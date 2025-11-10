@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "a_palette:lime_stained_modern_glass"
+    }
+  },
+  "pattern": [
+    "   ",
+    "XXX",
+    "XXX"
+  ],
+  "result": {
+    "count": 16,
+    "item": "a_palette:lime_stained_modern_glass_pane"
+  },
+  "show_notification": true
+}

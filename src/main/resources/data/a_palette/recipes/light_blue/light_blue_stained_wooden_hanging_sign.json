@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "Y Y",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:stripped_light_blue_stained_log"
+    },
+    "Y": {
+      "item": "minecraft:chain"
+    }
+  },
+  "result": {
+    "item": "a_palette:light_blue_stained_wooden_hanging_sign",
+    "count": 3
+  }
+}
+

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:magenta_stained_planks"
+    }
+  },
+  "result": {
+    "item": "a_palette:magenta_stained_wooden_slab",
+    "count": 6
+  }
+}
+

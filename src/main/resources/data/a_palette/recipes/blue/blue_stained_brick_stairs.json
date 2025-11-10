@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:blue_stained_bricks"
+    }
+  },
+  "result": {
+    "item": "a_palette:blue_stained_brick_stairs",
+    "count": 6
+  }
+}
+

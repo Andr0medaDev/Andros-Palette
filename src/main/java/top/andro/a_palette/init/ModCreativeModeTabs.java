@@ -105,6 +105,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.WHITE_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_WHITE_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_WHITE_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.WHITE_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.WHITE_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.WHITE_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.WHITE_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.WHITE_STAINED_WOODEN_SLAB.get());
@@ -124,6 +126,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.LIGHT_GRAY_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_LIGHT_GRAY_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_LIGHT_GRAY_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.LIGHT_GRAY_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.LIGHT_GRAY_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_SLAB.get());
@@ -143,6 +147,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.GRAY_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_GRAY_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_GRAY_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.GRAY_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.GRAY_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.GRAY_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.GRAY_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.GRAY_STAINED_WOODEN_SLAB.get());
@@ -162,6 +168,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BLACK_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_BLACK_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_BLACK_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.BLACK_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.BLACK_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.BLACK_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.BLACK_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.BLACK_STAINED_WOODEN_SLAB.get());
@@ -181,6 +189,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BROWN_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_BROWN_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_BROWN_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.BROWN_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.BROWN_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.BROWN_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.BROWN_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.BROWN_STAINED_WOODEN_SLAB.get());
@@ -200,6 +210,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.RED_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_RED_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_RED_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.RED_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.RED_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.RED_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.RED_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.RED_STAINED_WOODEN_SLAB.get());
@@ -219,6 +231,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ORANGE_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_ORANGE_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_ORANGE_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.ORANGE_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.ORANGE_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.ORANGE_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.ORANGE_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.ORANGE_STAINED_WOODEN_SLAB.get());
@@ -238,6 +252,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.YELLOW_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_YELLOW_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_YELLOW_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.YELLOW_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.YELLOW_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.YELLOW_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.YELLOW_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.YELLOW_STAINED_WOODEN_SLAB.get());
@@ -257,6 +273,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.LIME_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_LIME_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_LIME_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.LIME_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.LIME_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.LIME_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.LIME_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.LIME_STAINED_WOODEN_SLAB.get());
@@ -276,6 +294,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.GREEN_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_GREEN_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_GREEN_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.GREEN_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.GREEN_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.GREEN_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.GREEN_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.GREEN_STAINED_WOODEN_SLAB.get());
@@ -295,6 +315,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.CYAN_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_CYAN_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_CYAN_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.CYAN_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.CYAN_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.CYAN_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.CYAN_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.CYAN_STAINED_WOODEN_SLAB.get());
@@ -314,6 +336,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.LIGHT_BLUE_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.LIGHT_BLUE_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.LIGHT_BLUE_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_SLAB.get());
@@ -333,6 +357,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BLUE_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_BLUE_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_BLUE_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.BLUE_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.BLUE_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.BLUE_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.BLUE_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.BLUE_STAINED_WOODEN_SLAB.get());
@@ -352,6 +378,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.PURPLE_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_PURPLE_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_PURPLE_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.PURPLE_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.PURPLE_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.PURPLE_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.PURPLE_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.PURPLE_STAINED_WOODEN_SLAB.get());
@@ -371,6 +399,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.MAGENTA_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_MAGENTA_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_MAGENTA_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.MAGENTA_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.MAGENTA_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.MAGENTA_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.MAGENTA_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.MAGENTA_STAINED_WOODEN_SLAB.get());
@@ -390,6 +420,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.PINK_STAINED_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_PINK_STAINED_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_PINK_STAINED_WOOD.get());
+                        pOutput.accept(ModBlocks.PINK_STAINED_SIDING.get());
+                        pOutput.accept(ModBlocks.PINK_STAINED_BORDERED_SIDING.get());
                         pOutput.accept(ModBlocks.PINK_STAINED_PLANKS.get());
                         pOutput.accept(ModBlocks.PINK_STAINED_WOODEN_STAIRS.get());
                         pOutput.accept(ModBlocks.PINK_STAINED_WOODEN_SLAB.get());

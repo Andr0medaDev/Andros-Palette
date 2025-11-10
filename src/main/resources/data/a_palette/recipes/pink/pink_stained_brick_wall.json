@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:pink_stained_bricks"
+    }
+  },
+  "result": {
+    "item": "a_palette:pink_stained_brick_wall",
+    "count": 6
+  }
+}
+

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "tag": "minecraft:wood"
+    },
+    "Y": {
+      "item": "minecraft:red_dye"
+    },
+    "result": {
+      "item": "a_palette:red_stained_wood",
+      "count": 8
+    }
+  }
+}
+
