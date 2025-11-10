@@ -381,6 +381,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PINK_STAINED_WOODEN_WALL_SIGN = BLOCKS.register("pink_stained_wooden_wall_sign", () -> new ModWallSignBlock(ModWoodTypes.PINK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN)));
 
     // HANGING SIGN
+
     public static final DeferredBlock<Block> WHITE_STAINED_WOODEN_HANGING_SIGN = BLOCKS.register("white_stained_wooden_hanging_sign", () -> new ModHangingSignBlock(ModWoodTypes.WHITE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN)));
     public static final DeferredBlock<Block> LIGHT_GRAY_STAINED_WOODEN_HANGING_SIGN = BLOCKS.register("light_gray_stained_wooden_hanging_sign", () -> new ModHangingSignBlock(ModWoodTypes.LIGHT_GRAY, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN)));
     public static final DeferredBlock<Block> GRAY_STAINED_WOODEN_HANGING_SIGN = BLOCKS.register("gray_stained_wooden_hanging_sign", () -> new ModHangingSignBlock(ModWoodTypes.GRAY, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN)));

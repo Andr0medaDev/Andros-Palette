@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "tag": "minecraft:logs"
+    },
+    "Y": {
+      "item": "minecraft:light_gray_dye"
+    }
+  },
+  "result": {
+    "id": "a_palette:light_gray_stained_log",
+    "count": 8
+  }
+}
+

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:light_blue_stained_planks"
+    },
+    "Y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "a_palette:light_blue_stained_wooden_fence",
+    "count": 3
+  }
+}
+

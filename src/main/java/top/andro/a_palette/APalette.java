@@ -6,8 +6,10 @@ import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -26,11 +28,10 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.slf4j.Logger;
+import top.andro.a_palette.entity.ModBoatRenderer;
 import top.andro.a_palette.entity.ModModelLayers;
-import top.andro.a_palette.init.ModBlockEntities;
-import top.andro.a_palette.init.ModBlocks;
-import top.andro.a_palette.init.ModCreativeModeTabs;
-import top.andro.a_palette.init.ModItems;
+import top.andro.a_palette.init.*;
+import top.andro.a_palette.util.ModWoodTypes;
 
 import java.util.List;
 
@@ -47,51 +48,8 @@ public class APalette {
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
-    }
-
-    @OnlyIn(Dist.CLIENT)
-
-    public void registerBER(EntityRenderersEvent.RegisterRenderers event)
-    {
-        event.registerBlockEntityRenderer(ModBlockEntities.MOD_SIGN.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(ModModelLayers.WHITE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.LIGHT_GRAY_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.GRAY_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.BLACK_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.BROWN_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.RED_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.ORANGE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.YELLOW_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.LIME_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.GREEN_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.CYAN_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.LIGHT_BLUE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.BLUE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.PURPLE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.MAGENTA_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.PINK_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
-
-        event.registerLayerDefinition(ModModelLayers.WHITE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.LIGHT_GRAY_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.GRAY_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.BLACK_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.BROWN_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.RED_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.ORANGE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.YELLOW_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.LIME_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.GREEN_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.CYAN_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.LIGHT_BLUE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.BLUE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.PURPLE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.MAGENTA_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.PINK_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+        ModBlockEntities.register(modEventBus);
+        ModEntities.register(modEventBus);
     }
 
 
@@ -113,6 +71,27 @@ public class APalette {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.WHITE);
+            Sheets.addWoodType(ModWoodTypes.LIGHT_GRAY);
+            Sheets.addWoodType(ModWoodTypes.GRAY);
+            Sheets.addWoodType(ModWoodTypes.BLACK);
+            Sheets.addWoodType(ModWoodTypes.BROWN);
+            Sheets.addWoodType(ModWoodTypes.RED);
+            Sheets.addWoodType(ModWoodTypes.ORANGE);
+            Sheets.addWoodType(ModWoodTypes.YELLOW);
+            Sheets.addWoodType(ModWoodTypes.LIME);
+            Sheets.addWoodType(ModWoodTypes.GREEN);
+            Sheets.addWoodType(ModWoodTypes.CYAN);
+            Sheets.addWoodType(ModWoodTypes.LIGHT_BLUE);
+            Sheets.addWoodType(ModWoodTypes.BLUE);
+            Sheets.addWoodType(ModWoodTypes.PURPLE);
+            Sheets.addWoodType(ModWoodTypes.MAGENTA);
+            Sheets.addWoodType(ModWoodTypes.PINK);
+
+            EntityRenderers.register(ModEntities.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
+            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), context -> new ModBoatRenderer(context, true));
+
+
 
             List<ItemLike> translucentBlocks = List.of(
                     ModBlocks.CLEAR_GLASS,
@@ -259,10 +238,58 @@ public class APalette {
                 ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_STAINED_MODERN_GLASS.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_STAINED_MODERN_GLASS_PANE.get(), RenderType.translucent());
 
+
             }
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event)
+        {
+            event.registerBlockEntityRenderer(ModBlockEntities.MOD_SIGN.get(), SignRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(ModModelLayers.WHITE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.LIGHT_GRAY_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.GRAY_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.BLACK_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.BROWN_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.RED_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.ORANGE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.YELLOW_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.LIME_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.GREEN_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.CYAN_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.LIGHT_BLUE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.BLUE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.PURPLE_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.MAGENTA_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.PINK_STAINED_BOAT_LAYER, BoatModel::createBodyModel);
+
+            event.registerLayerDefinition(ModModelLayers.WHITE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.LIGHT_GRAY_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.GRAY_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.BLACK_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.BROWN_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.RED_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.ORANGE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.YELLOW_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.LIME_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.GREEN_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.CYAN_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.LIGHT_BLUE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.BLUE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.PURPLE_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.MAGENTA_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(ModModelLayers.PINK_STAINED_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+        }
     }
+
+
+
 }

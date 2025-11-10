@@ -7,6 +7,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import top.andro.a_palette.blockentity.ModSignBlockEntity;
 
+import javax.annotation.Nullable;
+
 public class ModStandingSignBlock extends StandingSignBlock {
     public ModStandingSignBlock(WoodType type, Properties properties) {
         super(type, properties);

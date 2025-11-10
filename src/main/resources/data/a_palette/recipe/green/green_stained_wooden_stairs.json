@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:green_stained_planks"
+    }
+  },
+  "result": {
+    "id": "a_palette:green_stained_wooden_stairs",
+    "count": 6
+  }
+}
+

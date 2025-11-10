@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "X": {
+      "item": "a_palette:modern_glass"
+    },
+    "Y": {
+      "item": "minecraft:light_blue_dye"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "result": {
+    "count": 8,
+    "id": "a_palette:light_blue_stained_modern_glass"
+  },
+  "show_notification": true
+}

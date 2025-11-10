@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "a_palette:magenta_stained_bricks"
+  },
+  "result": {
+    "id": "a_palette:magenta_stained_brick_stairs"
+    }
+}

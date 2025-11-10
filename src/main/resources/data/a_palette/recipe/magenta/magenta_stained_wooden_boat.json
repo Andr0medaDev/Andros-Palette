@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:magenta_stained_planks"
+    }
+  },
+  "result": {
+    "id": "a_palette:magenta_stained_boat",
+    "count": 1
+  }
+}
+

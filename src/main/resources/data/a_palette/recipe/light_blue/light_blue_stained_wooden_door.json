@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "a_palette:light_blue_stained_planks"
+    }
+  },
+  "result": {
+    "id": "a_palette:light_blue_stained_wooden_door",
+    "count": 3
+  }
+}
+

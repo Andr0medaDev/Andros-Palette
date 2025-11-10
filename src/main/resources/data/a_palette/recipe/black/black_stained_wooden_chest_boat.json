@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:chest"
+    },
+    {
+      "item": "a_palette:black_stained_boat"
+    }
+  ],
+  "result": {
+    "id": "a_palette:black_stained_chest_boat",
+    "count": 1
+  }
+}
+

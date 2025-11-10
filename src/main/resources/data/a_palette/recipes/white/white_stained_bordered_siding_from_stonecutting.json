@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "a_palette:white_stained_planks"
-  },
-  "result": "a_palette:white_stained_bordered_siding"
-}

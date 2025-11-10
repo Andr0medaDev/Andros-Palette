@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "X": {
+      "item": "a_palette:clear_glass"
+    }
+  },
+  "pattern": [
+    "   ",
+    "XXX",
+    "XXX"
+  ],
+  "result": {
+    "count": 16,
+    "id": "a_palette:clear_glass_pane"
+  },
+  "show_notification": true
+}

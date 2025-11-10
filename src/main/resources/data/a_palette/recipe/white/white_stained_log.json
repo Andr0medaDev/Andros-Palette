@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "tag": "minecraft:logs"
+    },
+    "Y": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "result": {
+    "id": "a_palette:white_stained_log",
+    "count": 8
+  }
+}
+

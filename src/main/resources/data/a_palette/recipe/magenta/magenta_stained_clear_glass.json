@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "key": {
+    "X": {
+      "item": "a_palette:clear_glass"
+    },
+    "Y": {
+      "item": "minecraft:magenta_dye"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "result": {
+    "count": 8,
+    "id": "a_palette:magenta_stained_clear_glass"
+  },
+  "show_notification": true
+}

@@ -19,7 +19,7 @@ import top.andro.a_palette.init.ModItems;
 import java.util.function.IntFunction;
 
 public class ModChestBoatEntity extends ChestBoat {
-    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
+    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModChestBoatEntity.class, EntityDataSerializers.INT);
 
 
     public ModChestBoatEntity(EntityType<? extends Boat> pEntityType, Level pLevel) {
