@@ -237,7 +237,39 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.BLUE_STAINED_WOODEN_PLANKS.get())
                 .add(ModBlocks.PURPLE_STAINED_WOODEN_PLANKS.get())
                 .add(ModBlocks.MAGENTA_STAINED_WOODEN_PLANKS.get())
-                .add(ModBlocks.PINK_STAINED_WOODEN_PLANKS.get());
+                .add(ModBlocks.PINK_STAINED_WOODEN_PLANKS.get())
+
+                .add(ModBlocks.WHITE_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.LIGHT_GRAY_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.GRAY_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.BLACK_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.BROWN_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.RED_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.ORANGE_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.YELLOW_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.LIME_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.CYAN_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.LIGHT_BLUE_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.BLUE_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.PURPLE_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.MAGENTA_STAINED_BORDERED_SIDING.get())
+                .add(ModBlocks.PINK_STAINED_BORDERED_SIDING.get())
+
+                .add(ModBlocks.WHITE_STAINED_SIDING.get())
+                .add(ModBlocks.LIGHT_GRAY_STAINED_SIDING.get())
+                .add(ModBlocks.GRAY_STAINED_SIDING.get())
+                .add(ModBlocks.BLACK_STAINED_SIDING.get())
+                .add(ModBlocks.BROWN_STAINED_SIDING.get())
+                .add(ModBlocks.RED_STAINED_SIDING.get())
+                .add(ModBlocks.ORANGE_STAINED_SIDING.get())
+                .add(ModBlocks.YELLOW_STAINED_SIDING.get())
+                .add(ModBlocks.LIME_STAINED_SIDING.get())
+                .add(ModBlocks.CYAN_STAINED_SIDING.get())
+                .add(ModBlocks.LIGHT_BLUE_STAINED_SIDING.get())
+                .add(ModBlocks.BLUE_STAINED_SIDING.get())
+                .add(ModBlocks.PURPLE_STAINED_SIDING.get())
+                .add(ModBlocks.MAGENTA_STAINED_SIDING.get())
+                .add(ModBlocks.PINK_STAINED_SIDING.get());
 
     }
 }

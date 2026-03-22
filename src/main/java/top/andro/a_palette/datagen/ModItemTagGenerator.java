@@ -101,7 +101,41 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.BLUE_STAINED_WOODEN_PLANKS.get().asItem())
                 .add(ModBlocks.PURPLE_STAINED_WOODEN_PLANKS.get().asItem())
                 .add(ModBlocks.MAGENTA_STAINED_WOODEN_PLANKS.get().asItem())
-                .add(ModBlocks.PINK_STAINED_WOODEN_PLANKS.get().asItem());
+                .add(ModBlocks.PINK_STAINED_WOODEN_PLANKS.get().asItem())
+
+                .add(ModBlocks.WHITE_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.GRAY_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.BLACK_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.BROWN_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.RED_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.ORANGE_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.YELLOW_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.LIME_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.CYAN_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.BLUE_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.PURPLE_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.MAGENTA_STAINED_BORDERED_SIDING.get().asItem())
+                .add(ModBlocks.PINK_STAINED_BORDERED_SIDING.get().asItem())
+
+                .add(ModBlocks.WHITE_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.GRAY_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.BLACK_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.BROWN_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.RED_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.ORANGE_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.YELLOW_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.LIME_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.CYAN_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.BLUE_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.PURPLE_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.MAGENTA_STAINED_SIDING.get().asItem())
+                .add(ModBlocks.PINK_STAINED_SIDING.get().asItem());
+
+
 
 
 

@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "a_palette:green_stained_planks"
+    "item": "a_palette:green_stained_wooden_planks"
   },
   "result": {
     "id": "a_palette:green_stained_siding"
