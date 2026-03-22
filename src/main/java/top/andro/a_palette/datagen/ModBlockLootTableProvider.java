@@ -23,7 +23,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.WHITE_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.WHITE_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.WHITE_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.WHITE_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.WHITE_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.WHITE_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.WHITE_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.WHITE_STAINED_WOODEN_FENCE.get());
@@ -32,17 +32,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.WHITE_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.WHITE_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.WHITE_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.WHITE_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.WHITE_STAINED_LOG.get());
-        dropSelf(ModBlocks.WHITE_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_WHITE_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_WHITE_STAINED_WOOD.get());
+        dropSelf(ModBlocks.WHITE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.WHITE_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_WHITE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_WHITE_STAINED_WOODEN_WOOD.get());
 
         //LIGHT_GRAY
         dropSelf(ModBlocks.LIGHT_GRAY_STAINED_BRICKS.get());
         dropSelf(ModBlocks.LIGHT_GRAY_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.LIGHT_GRAY_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.LIGHT_GRAY_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_FENCE.get());
@@ -51,10 +51,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.LIGHT_GRAY_STAINED_LOG.get());
-        dropSelf(ModBlocks.LIGHT_GRAY_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_LIGHT_GRAY_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_LIGHT_GRAY_STAINED_WOOD.get());
+        dropSelf(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_LIGHT_GRAY_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_LIGHT_GRAY_STAINED_WOODEN_WOOD.get());
 
 
         //GRAY
@@ -62,7 +62,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.GRAY_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.GRAY_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.GRAY_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.GRAY_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.GRAY_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.GRAY_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.GRAY_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.GRAY_STAINED_WOODEN_FENCE.get());
@@ -71,10 +71,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.GRAY_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.GRAY_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.GRAY_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.GRAY_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.GRAY_STAINED_LOG.get());
-        dropSelf(ModBlocks.GRAY_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_GRAY_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_GRAY_STAINED_WOOD.get());
+        dropSelf(ModBlocks.GRAY_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.GRAY_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_GRAY_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_GRAY_STAINED_WOODEN_WOOD.get());
 
 
         //BLACK
@@ -82,7 +82,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.BLACK_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.BLACK_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.BLACK_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.BLACK_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.BLACK_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.BLACK_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.BLACK_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.BLACK_STAINED_WOODEN_FENCE.get());
@@ -91,10 +91,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.BLACK_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.BLACK_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.BLACK_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.BLACK_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.BLACK_STAINED_LOG.get());
-        dropSelf(ModBlocks.BLACK_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_BLACK_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_BLACK_STAINED_WOOD.get());
+        dropSelf(ModBlocks.BLACK_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.BLACK_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_BLACK_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_BLACK_STAINED_WOODEN_WOOD.get());
 
 
         //BROWN
@@ -102,7 +102,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.BROWN_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.BROWN_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.BROWN_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.BROWN_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.BROWN_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.BROWN_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.BROWN_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.BROWN_STAINED_WOODEN_FENCE.get());
@@ -111,17 +111,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.BROWN_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.BROWN_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.BROWN_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.BROWN_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.BROWN_STAINED_LOG.get());
-        dropSelf(ModBlocks.BROWN_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_BROWN_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_BROWN_STAINED_WOOD.get());
+        dropSelf(ModBlocks.BROWN_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.BROWN_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_BROWN_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_BROWN_STAINED_WOODEN_WOOD.get());
 
         //RED
         dropSelf(ModBlocks.RED_STAINED_BRICKS.get());
         dropSelf(ModBlocks.RED_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.RED_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.RED_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.RED_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.RED_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.RED_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.RED_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.RED_STAINED_WOODEN_FENCE.get());
@@ -130,17 +130,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.RED_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.RED_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.RED_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.RED_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.RED_STAINED_LOG.get());
-        dropSelf(ModBlocks.RED_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_RED_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_RED_STAINED_WOOD.get());
+        dropSelf(ModBlocks.RED_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.RED_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_RED_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_RED_STAINED_WOODEN_WOOD.get());
 
         //ORANGE
         dropSelf(ModBlocks.ORANGE_STAINED_BRICKS.get());
         dropSelf(ModBlocks.ORANGE_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.ORANGE_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.ORANGE_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.ORANGE_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.ORANGE_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.ORANGE_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.ORANGE_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.ORANGE_STAINED_WOODEN_FENCE.get());
@@ -149,17 +149,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.ORANGE_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.ORANGE_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.ORANGE_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.ORANGE_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.ORANGE_STAINED_LOG.get());
-        dropSelf(ModBlocks.ORANGE_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_ORANGE_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_ORANGE_STAINED_WOOD.get());
+        dropSelf(ModBlocks.ORANGE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.ORANGE_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_ORANGE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_ORANGE_STAINED_WOODEN_WOOD.get());
 
         //YELLOW
         dropSelf(ModBlocks.YELLOW_STAINED_BRICKS.get());
         dropSelf(ModBlocks.YELLOW_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.YELLOW_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.YELLOW_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.YELLOW_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.YELLOW_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.YELLOW_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.YELLOW_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.YELLOW_STAINED_WOODEN_FENCE.get());
@@ -168,17 +168,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.YELLOW_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.YELLOW_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.YELLOW_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.YELLOW_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.YELLOW_STAINED_LOG.get());
-        dropSelf(ModBlocks.YELLOW_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_YELLOW_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_YELLOW_STAINED_WOOD.get());
+        dropSelf(ModBlocks.YELLOW_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.YELLOW_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_YELLOW_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_YELLOW_STAINED_WOODEN_WOOD.get());
 
         //LIME
         dropSelf(ModBlocks.LIME_STAINED_BRICKS.get());
         dropSelf(ModBlocks.LIME_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.LIME_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.LIME_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.LIME_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.LIME_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.LIME_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.LIME_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.LIME_STAINED_WOODEN_FENCE.get());
@@ -187,17 +187,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.LIME_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.LIME_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.LIME_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.LIME_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.LIME_STAINED_LOG.get());
-        dropSelf(ModBlocks.LIME_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_LIME_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_LIME_STAINED_WOOD.get());
+        dropSelf(ModBlocks.LIME_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.LIME_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_LIME_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_LIME_STAINED_WOODEN_WOOD.get());
 
         //GREEN
         dropSelf(ModBlocks.GREEN_STAINED_BRICKS.get());
         dropSelf(ModBlocks.GREEN_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.GREEN_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.GREEN_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.GREEN_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.GREEN_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.GREEN_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.GREEN_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.GREEN_STAINED_WOODEN_FENCE.get());
@@ -206,17 +206,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.GREEN_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.GREEN_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.GREEN_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.GREEN_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.GREEN_STAINED_LOG.get());
-        dropSelf(ModBlocks.GREEN_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_GREEN_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_GREEN_STAINED_WOOD.get());
+        dropSelf(ModBlocks.GREEN_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.GREEN_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_GREEN_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_GREEN_STAINED_WOODEN_WOOD.get());
 
         //CYAN
         dropSelf(ModBlocks.CYAN_STAINED_BRICKS.get());
         dropSelf(ModBlocks.CYAN_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.CYAN_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.CYAN_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.CYAN_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.CYAN_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.CYAN_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.CYAN_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.CYAN_STAINED_WOODEN_FENCE.get());
@@ -225,17 +225,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.CYAN_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.CYAN_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.CYAN_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.CYAN_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.CYAN_STAINED_LOG.get());
-        dropSelf(ModBlocks.CYAN_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_CYAN_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_CYAN_STAINED_WOOD.get());
+        dropSelf(ModBlocks.CYAN_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.CYAN_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_CYAN_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_CYAN_STAINED_WOODEN_WOOD.get());
 
         //LIGHT_BLUE
         dropSelf(ModBlocks.LIGHT_BLUE_STAINED_BRICKS.get());
         dropSelf(ModBlocks.LIGHT_BLUE_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.LIGHT_BLUE_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.LIGHT_BLUE_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_FENCE.get());
@@ -244,17 +244,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.LIGHT_BLUE_STAINED_LOG.get());
-        dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_WOOD.get());
+        dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_LIGHT_BLUE_STAINED_WOODEN_WOOD.get());
 
         //BLUE
         dropSelf(ModBlocks.BLUE_STAINED_BRICKS.get());
         dropSelf(ModBlocks.BLUE_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.BLUE_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.BLUE_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.BLUE_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.BLUE_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.BLUE_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.BLUE_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.BLUE_STAINED_WOODEN_FENCE.get());
@@ -263,17 +263,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.BLUE_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.BLUE_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.BLUE_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.BLUE_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.BLUE_STAINED_LOG.get());
-        dropSelf(ModBlocks.BLUE_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_BLUE_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_BLUE_STAINED_WOOD.get());
+        dropSelf(ModBlocks.BLUE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.BLUE_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_BLUE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_BLUE_STAINED_WOODEN_WOOD.get());
 
         //PURPLE
         dropSelf(ModBlocks.PURPLE_STAINED_BRICKS.get());
         dropSelf(ModBlocks.PURPLE_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.PURPLE_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.PURPLE_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.PURPLE_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.PURPLE_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.PURPLE_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.PURPLE_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.PURPLE_STAINED_WOODEN_FENCE.get());
@@ -282,17 +282,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.PURPLE_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.PURPLE_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.PURPLE_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.PURPLE_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.PURPLE_STAINED_LOG.get());
-        dropSelf(ModBlocks.PURPLE_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_PURPLE_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_PURPLE_STAINED_WOOD.get());
+        dropSelf(ModBlocks.PURPLE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.PURPLE_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_PURPLE_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_PURPLE_STAINED_WOODEN_WOOD.get());
 
         //MAGENTA
         dropSelf(ModBlocks.MAGENTA_STAINED_BRICKS.get());
         dropSelf(ModBlocks.MAGENTA_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.MAGENTA_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.MAGENTA_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.MAGENTA_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.MAGENTA_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.MAGENTA_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.MAGENTA_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.MAGENTA_STAINED_WOODEN_FENCE.get());
@@ -301,17 +301,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.MAGENTA_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.MAGENTA_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.MAGENTA_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.MAGENTA_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.MAGENTA_STAINED_LOG.get());
-        dropSelf(ModBlocks.MAGENTA_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_MAGENTA_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_MAGENTA_STAINED_WOOD.get());
+        dropSelf(ModBlocks.MAGENTA_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.MAGENTA_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_MAGENTA_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_MAGENTA_STAINED_WOODEN_WOOD.get());
 
         //PINK
         dropSelf(ModBlocks.PINK_STAINED_BRICKS.get());
         dropSelf(ModBlocks.PINK_STAINED_BRICK_STAIRS.get());
         dropSelf(ModBlocks.PINK_STAINED_BRICK_SLAB.get());
         dropSelf(ModBlocks.PINK_STAINED_BRICK_WALL.get());
-        dropSelf(ModBlocks.PINK_STAINED_PLANKS.get());
+        dropSelf(ModBlocks.PINK_STAINED_WOODEN_PLANKS.get());
         dropSelf(ModBlocks.PINK_STAINED_WOODEN_STAIRS.get());
         dropSelf(ModBlocks.PINK_STAINED_WOODEN_SLAB.get());
         dropSelf(ModBlocks.PINK_STAINED_WOODEN_FENCE.get());
@@ -320,10 +320,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.PINK_STAINED_WOODEN_DOOR.get(), block -> createDoorTable(ModBlocks.PINK_STAINED_WOODEN_DOOR.get()));
         dropSelf(ModBlocks.PINK_STAINED_WOODEN_TRAPDOOR.get());
         dropSelf(ModBlocks.PINK_STAINED_WOODEN_BUTTON.get());
-        dropSelf(ModBlocks.PINK_STAINED_LOG.get());
-        dropSelf(ModBlocks.PINK_STAINED_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_PINK_STAINED_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_PINK_STAINED_WOOD.get());
+        dropSelf(ModBlocks.PINK_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.PINK_STAINED_WOODEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_PINK_STAINED_WOODEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_PINK_STAINED_WOODEN_WOOD.get());
 
         this.add(ModBlocks.WHITE_STAINED_WOODEN_SIGN.get(), block -> createSingleItemTable(ModItems.WHITE_STAINED_WOODEN_SIGN.get()));
         this.add(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_SIGN.get(), block -> createSingleItemTable(ModItems.LIGHT_GRAY_STAINED_WOODEN_SIGN.get()));

@@ -26,7 +26,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.WHITE_STAINED_BRICK_WALL, ModBlocks.WHITE_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.WHITE_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.WHITE_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.WHITE_STAINED_WOODEN_FENCE, ModBlocks.WHITE_STAINED_PLANKS);
+        fenceItem(ModBlocks.WHITE_STAINED_WOODEN_FENCE, ModBlocks.WHITE_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.WHITE_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.WHITE_STAINED_WOODEN_DOOR.asItem());
 
@@ -35,7 +35,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.LIGHT_GRAY_STAINED_BRICK_WALL, ModBlocks.LIGHT_GRAY_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_FENCE, ModBlocks.LIGHT_GRAY_STAINED_PLANKS);
+        fenceItem(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_FENCE, ModBlocks.LIGHT_GRAY_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_DOOR.asItem());
 
@@ -44,7 +44,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.GRAY_STAINED_BRICK_WALL, ModBlocks.GRAY_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.GRAY_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.GRAY_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.GRAY_STAINED_WOODEN_FENCE, ModBlocks.GRAY_STAINED_PLANKS);
+        fenceItem(ModBlocks.GRAY_STAINED_WOODEN_FENCE, ModBlocks.GRAY_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.GRAY_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.GRAY_STAINED_WOODEN_DOOR.asItem());
 
@@ -53,7 +53,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.BLACK_STAINED_BRICK_WALL, ModBlocks.BLACK_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.BLACK_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.BLACK_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.BLACK_STAINED_WOODEN_FENCE, ModBlocks.BLACK_STAINED_PLANKS);
+        fenceItem(ModBlocks.BLACK_STAINED_WOODEN_FENCE, ModBlocks.BLACK_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.BLACK_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.BLACK_STAINED_WOODEN_DOOR.asItem());
 
@@ -62,7 +62,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.BROWN_STAINED_BRICK_WALL, ModBlocks.BROWN_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.BROWN_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.BROWN_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.BROWN_STAINED_WOODEN_FENCE, ModBlocks.BROWN_STAINED_PLANKS);
+        fenceItem(ModBlocks.BROWN_STAINED_WOODEN_FENCE, ModBlocks.BROWN_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.BROWN_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.BROWN_STAINED_WOODEN_DOOR.asItem());
 
@@ -71,7 +71,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.RED_STAINED_BRICK_WALL, ModBlocks.RED_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.RED_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.RED_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.RED_STAINED_WOODEN_FENCE, ModBlocks.RED_STAINED_PLANKS);
+        fenceItem(ModBlocks.RED_STAINED_WOODEN_FENCE, ModBlocks.RED_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.RED_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.RED_STAINED_WOODEN_DOOR.asItem());
 
@@ -80,7 +80,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.ORANGE_STAINED_BRICK_WALL, ModBlocks.ORANGE_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.ORANGE_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.ORANGE_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.ORANGE_STAINED_WOODEN_FENCE, ModBlocks.ORANGE_STAINED_PLANKS);
+        fenceItem(ModBlocks.ORANGE_STAINED_WOODEN_FENCE, ModBlocks.ORANGE_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.ORANGE_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.ORANGE_STAINED_WOODEN_DOOR.asItem());
 
@@ -89,7 +89,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.YELLOW_STAINED_BRICK_WALL, ModBlocks.YELLOW_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.YELLOW_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.YELLOW_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.YELLOW_STAINED_WOODEN_FENCE, ModBlocks.YELLOW_STAINED_PLANKS);
+        fenceItem(ModBlocks.YELLOW_STAINED_WOODEN_FENCE, ModBlocks.YELLOW_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.YELLOW_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.YELLOW_STAINED_WOODEN_DOOR.asItem());
 
@@ -98,7 +98,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.LIME_STAINED_BRICK_WALL, ModBlocks.LIME_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.LIME_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.LIME_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.LIME_STAINED_WOODEN_FENCE, ModBlocks.LIME_STAINED_PLANKS);
+        fenceItem(ModBlocks.LIME_STAINED_WOODEN_FENCE, ModBlocks.LIME_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.LIME_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.LIME_STAINED_WOODEN_DOOR.asItem());
 
@@ -107,7 +107,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.GREEN_STAINED_BRICK_WALL, ModBlocks.GREEN_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.GREEN_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.GREEN_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.GREEN_STAINED_WOODEN_FENCE, ModBlocks.GREEN_STAINED_PLANKS);
+        fenceItem(ModBlocks.GREEN_STAINED_WOODEN_FENCE, ModBlocks.GREEN_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.GREEN_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.GREEN_STAINED_WOODEN_DOOR.asItem());
 
@@ -116,7 +116,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.CYAN_STAINED_BRICK_WALL, ModBlocks.CYAN_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.CYAN_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.CYAN_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.CYAN_STAINED_WOODEN_FENCE, ModBlocks.CYAN_STAINED_PLANKS);
+        fenceItem(ModBlocks.CYAN_STAINED_WOODEN_FENCE, ModBlocks.CYAN_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.CYAN_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.CYAN_STAINED_WOODEN_DOOR.asItem());
 
@@ -125,7 +125,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.LIGHT_BLUE_STAINED_BRICK_WALL, ModBlocks.LIGHT_BLUE_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_FENCE, ModBlocks.LIGHT_BLUE_STAINED_PLANKS);
+        fenceItem(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_FENCE, ModBlocks.LIGHT_BLUE_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_DOOR.asItem());
 
@@ -134,7 +134,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.BLUE_STAINED_BRICK_WALL, ModBlocks.BLUE_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.BLUE_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.BLUE_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.BLUE_STAINED_WOODEN_FENCE, ModBlocks.BLUE_STAINED_PLANKS);
+        fenceItem(ModBlocks.BLUE_STAINED_WOODEN_FENCE, ModBlocks.BLUE_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.BLUE_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.BLUE_STAINED_WOODEN_DOOR.asItem());
 
@@ -143,7 +143,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.PURPLE_STAINED_BRICK_WALL, ModBlocks.PURPLE_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.PURPLE_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.PURPLE_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.PURPLE_STAINED_WOODEN_FENCE, ModBlocks.PURPLE_STAINED_PLANKS);
+        fenceItem(ModBlocks.PURPLE_STAINED_WOODEN_FENCE, ModBlocks.PURPLE_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.PURPLE_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.PURPLE_STAINED_WOODEN_DOOR.asItem());
 
@@ -152,7 +152,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.MAGENTA_STAINED_BRICK_WALL, ModBlocks.MAGENTA_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.MAGENTA_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.MAGENTA_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.MAGENTA_STAINED_WOODEN_FENCE, ModBlocks.MAGENTA_STAINED_PLANKS);
+        fenceItem(ModBlocks.MAGENTA_STAINED_WOODEN_FENCE, ModBlocks.MAGENTA_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.MAGENTA_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.MAGENTA_STAINED_WOODEN_DOOR.asItem());
 
@@ -161,60 +161,60 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.PINK_STAINED_BRICK_WALL, ModBlocks.PINK_STAINED_BRICKS);
         evenSimplerBlockItem(ModBlocks.PINK_STAINED_WOODEN_STAIRS);
         evenSimplerBlockItem(ModBlocks.PINK_STAINED_WOODEN_SLAB);
-        fenceItem(ModBlocks.PINK_STAINED_WOODEN_FENCE, ModBlocks.PINK_STAINED_PLANKS);
+        fenceItem(ModBlocks.PINK_STAINED_WOODEN_FENCE, ModBlocks.PINK_STAINED_WOODEN_PLANKS);
         evenSimplerBlockItem(ModBlocks.PINK_STAINED_WOODEN_FENCE_GATE);
         basicItem(ModBlocks.PINK_STAINED_WOODEN_DOOR.asItem());
 
-        buttonItem(ModBlocks.WHITE_STAINED_WOODEN_BUTTON, ModBlocks.WHITE_STAINED_PLANKS);
-        buttonItem(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_BUTTON, ModBlocks.LIGHT_GRAY_STAINED_PLANKS);
-        buttonItem(ModBlocks.GRAY_STAINED_WOODEN_BUTTON, ModBlocks.GRAY_STAINED_PLANKS);
-        buttonItem(ModBlocks.BLACK_STAINED_WOODEN_BUTTON, ModBlocks.BLACK_STAINED_PLANKS);
-        buttonItem(ModBlocks.BROWN_STAINED_WOODEN_BUTTON, ModBlocks.BROWN_STAINED_PLANKS);
-        buttonItem(ModBlocks.RED_STAINED_WOODEN_BUTTON, ModBlocks.RED_STAINED_PLANKS);
-        buttonItem(ModBlocks.ORANGE_STAINED_WOODEN_BUTTON, ModBlocks.ORANGE_STAINED_PLANKS);
-        buttonItem(ModBlocks.YELLOW_STAINED_WOODEN_BUTTON, ModBlocks.YELLOW_STAINED_PLANKS);
-        buttonItem(ModBlocks.LIME_STAINED_WOODEN_BUTTON, ModBlocks.LIME_STAINED_PLANKS);
-        buttonItem(ModBlocks.GREEN_STAINED_WOODEN_BUTTON, ModBlocks.GREEN_STAINED_PLANKS);
-        buttonItem(ModBlocks.CYAN_STAINED_WOODEN_BUTTON, ModBlocks.CYAN_STAINED_PLANKS);
-        buttonItem(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_BUTTON, ModBlocks.LIGHT_BLUE_STAINED_PLANKS);
-        buttonItem(ModBlocks.BLUE_STAINED_WOODEN_BUTTON, ModBlocks.BLUE_STAINED_PLANKS);
-        buttonItem(ModBlocks.PURPLE_STAINED_WOODEN_BUTTON, ModBlocks.PURPLE_STAINED_PLANKS);
-        buttonItem(ModBlocks.MAGENTA_STAINED_WOODEN_BUTTON, ModBlocks.MAGENTA_STAINED_PLANKS);
-        buttonItem(ModBlocks.PINK_STAINED_WOODEN_BUTTON, ModBlocks.PINK_STAINED_PLANKS);
+        buttonItem(ModBlocks.WHITE_STAINED_WOODEN_BUTTON, ModBlocks.WHITE_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_BUTTON, ModBlocks.LIGHT_GRAY_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.GRAY_STAINED_WOODEN_BUTTON, ModBlocks.GRAY_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.BLACK_STAINED_WOODEN_BUTTON, ModBlocks.BLACK_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.BROWN_STAINED_WOODEN_BUTTON, ModBlocks.BROWN_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.RED_STAINED_WOODEN_BUTTON, ModBlocks.RED_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.ORANGE_STAINED_WOODEN_BUTTON, ModBlocks.ORANGE_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.YELLOW_STAINED_WOODEN_BUTTON, ModBlocks.YELLOW_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.LIME_STAINED_WOODEN_BUTTON, ModBlocks.LIME_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.GREEN_STAINED_WOODEN_BUTTON, ModBlocks.GREEN_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.CYAN_STAINED_WOODEN_BUTTON, ModBlocks.CYAN_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_BUTTON, ModBlocks.LIGHT_BLUE_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.BLUE_STAINED_WOODEN_BUTTON, ModBlocks.BLUE_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.PURPLE_STAINED_WOODEN_BUTTON, ModBlocks.PURPLE_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.MAGENTA_STAINED_WOODEN_BUTTON, ModBlocks.MAGENTA_STAINED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.PINK_STAINED_WOODEN_BUTTON, ModBlocks.PINK_STAINED_WOODEN_PLANKS);
 
-        basicItem(ModItems.WHITE_STAINED_BOAT.get());
-        basicItem(ModItems.LIGHT_GRAY_STAINED_BOAT.get());
-        basicItem(ModItems.GRAY_STAINED_BOAT.get());
-        basicItem(ModItems.BLACK_STAINED_BOAT.get());
-        basicItem(ModItems.BROWN_STAINED_BOAT.get());
-        basicItem(ModItems.RED_STAINED_BOAT.get());
-        basicItem(ModItems.ORANGE_STAINED_BOAT.get());
-        basicItem(ModItems.YELLOW_STAINED_BOAT.get());
-        basicItem(ModItems.LIME_STAINED_BOAT.get());
-        basicItem(ModItems.GREEN_STAINED_BOAT.get());
-        basicItem(ModItems.CYAN_STAINED_BOAT.get());
-        basicItem(ModItems.LIGHT_BLUE_STAINED_BOAT.get());
-        basicItem(ModItems.BLUE_STAINED_BOAT.get());
-        basicItem(ModItems.PURPLE_STAINED_BOAT.get());
-        basicItem(ModItems.MAGENTA_STAINED_BOAT.get());
-        basicItem(ModItems.PINK_STAINED_BOAT.get());
+        basicItem(ModItems.WHITE_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.LIGHT_GRAY_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.GRAY_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.BLACK_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.BROWN_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.RED_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.ORANGE_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.YELLOW_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.LIME_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.GREEN_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.CYAN_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.LIGHT_BLUE_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.BLUE_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.PURPLE_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.MAGENTA_STAINED_WOODEN_BOAT.get());
+        basicItem(ModItems.PINK_STAINED_WOODEN_BOAT.get());
 
-        basicItem(ModItems.WHITE_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.LIGHT_GRAY_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.GRAY_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.BLACK_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.BROWN_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.RED_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.ORANGE_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.YELLOW_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.LIME_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.GREEN_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.CYAN_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.LIGHT_BLUE_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.BLUE_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.PURPLE_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.MAGENTA_STAINED_CHEST_BOAT.get());
-        basicItem(ModItems.PINK_STAINED_CHEST_BOAT.get());
+        basicItem(ModItems.WHITE_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.LIGHT_GRAY_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.GRAY_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.BLACK_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.BROWN_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.RED_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.ORANGE_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.YELLOW_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.LIME_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.GREEN_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.CYAN_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.LIGHT_BLUE_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.BLUE_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.PURPLE_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.MAGENTA_STAINED_WOODEN_CHEST_BOAT.get());
+        basicItem(ModItems.PINK_STAINED_WOODEN_CHEST_BOAT.get());
 
         basicItem(ModItems.WHITE_STAINED_WOODEN_SIGN.get());
         basicItem(ModItems.LIGHT_GRAY_STAINED_WOODEN_SIGN.get());

@@ -35,22 +35,22 @@ public class ModBoatEntity extends Boat {
     @Override
     public Item getDropItem() {
         return switch (getModVariant()) {
-            case WHITE -> ModItems.WHITE_STAINED_BOAT.get();
-            case LIGHT_GRAY -> ModItems.LIGHT_GRAY_STAINED_BOAT.get();
-            case GRAY -> ModItems.GRAY_STAINED_BOAT.get();
-            case BLACK -> ModItems.BLACK_STAINED_BOAT.get();
-            case BROWN -> ModItems.BROWN_STAINED_BOAT.get();
-            case RED -> ModItems.RED_STAINED_BOAT.get();
-            case ORANGE -> ModItems.ORANGE_STAINED_BOAT.get();
-            case YELLOW -> ModItems.YELLOW_STAINED_BOAT.get();
-            case LIME -> ModItems.LIME_STAINED_BOAT.get();
-            case GREEN -> ModItems.GREEN_STAINED_BOAT.get();
-            case CYAN -> ModItems.CYAN_STAINED_BOAT.get();
-            case LIGHT_BLUE -> ModItems.LIGHT_BLUE_STAINED_BOAT.get();
-            case BLUE -> ModItems.BLUE_STAINED_BOAT.get();
-            case PURPLE -> ModItems.PURPLE_STAINED_BOAT.get();
-            case MAGENTA -> ModItems.MAGENTA_STAINED_BOAT.get();
-            case PINK -> ModItems.PINK_STAINED_BOAT.get();
+            case WHITE -> ModItems.WHITE_STAINED_WOODEN_BOAT.get();
+            case LIGHT_GRAY -> ModItems.LIGHT_GRAY_STAINED_WOODEN_BOAT.get();
+            case GRAY -> ModItems.GRAY_STAINED_WOODEN_BOAT.get();
+            case BLACK -> ModItems.BLACK_STAINED_WOODEN_BOAT.get();
+            case BROWN -> ModItems.BROWN_STAINED_WOODEN_BOAT.get();
+            case RED -> ModItems.RED_STAINED_WOODEN_BOAT.get();
+            case ORANGE -> ModItems.ORANGE_STAINED_WOODEN_BOAT.get();
+            case YELLOW -> ModItems.YELLOW_STAINED_WOODEN_BOAT.get();
+            case LIME -> ModItems.LIME_STAINED_WOODEN_BOAT.get();
+            case GREEN -> ModItems.GREEN_STAINED_WOODEN_BOAT.get();
+            case CYAN -> ModItems.CYAN_STAINED_WOODEN_BOAT.get();
+            case LIGHT_BLUE -> ModItems.LIGHT_BLUE_STAINED_WOODEN_BOAT.get();
+            case BLUE -> ModItems.BLUE_STAINED_WOODEN_BOAT.get();
+            case PURPLE -> ModItems.PURPLE_STAINED_WOODEN_BOAT.get();
+            case MAGENTA -> ModItems.MAGENTA_STAINED_WOODEN_BOAT.get();
+            case PINK -> ModItems.PINK_STAINED_WOODEN_BOAT.get();
         };
     }
 
@@ -80,22 +80,22 @@ public class ModBoatEntity extends Boat {
     }
 
     public static enum Type implements StringRepresentable {
-        WHITE(ModBlocks.WHITE_STAINED_PLANKS.get(), "white"),
-        LIGHT_GRAY(ModBlocks.LIGHT_GRAY_STAINED_PLANKS.get(), "light_gray"),
-        GRAY(ModBlocks.GRAY_STAINED_PLANKS.get(), "gray"),
-        BLACK(ModBlocks.BLACK_STAINED_PLANKS.get(), "black"),
-        BROWN(ModBlocks.BROWN_STAINED_PLANKS.get(), "brown"),
-        RED(ModBlocks.RED_STAINED_PLANKS.get(), "red"),
-        ORANGE(ModBlocks.ORANGE_STAINED_PLANKS.get(), "orange"),
-        YELLOW(ModBlocks.YELLOW_STAINED_PLANKS.get(), "yellow"),
-        LIME(ModBlocks.LIME_STAINED_PLANKS.get(), "lime"),
-        GREEN(ModBlocks.GREEN_STAINED_PLANKS.get(), "green"),
-        CYAN(ModBlocks.CYAN_STAINED_PLANKS.get(), "cyan"),
-        LIGHT_BLUE(ModBlocks.LIGHT_BLUE_STAINED_PLANKS.get(), "light_blue"),
-        BLUE(ModBlocks.BLUE_STAINED_PLANKS.get(), "blue"),
-        PURPLE(ModBlocks.PURPLE_STAINED_PLANKS.get(), "purple"),
-        MAGENTA(ModBlocks.MAGENTA_STAINED_PLANKS.get(), "magenta"),
-        PINK(ModBlocks.PINK_STAINED_PLANKS.get(), "pink");
+        WHITE(ModBlocks.WHITE_STAINED_WOODEN_PLANKS.get(), "white"),
+        LIGHT_GRAY(ModBlocks.LIGHT_GRAY_STAINED_WOODEN_PLANKS.get(), "light_gray"),
+        GRAY(ModBlocks.GRAY_STAINED_WOODEN_PLANKS.get(), "gray"),
+        BLACK(ModBlocks.BLACK_STAINED_WOODEN_PLANKS.get(), "black"),
+        BROWN(ModBlocks.BROWN_STAINED_WOODEN_PLANKS.get(), "brown"),
+        RED(ModBlocks.RED_STAINED_WOODEN_PLANKS.get(), "red"),
+        ORANGE(ModBlocks.ORANGE_STAINED_WOODEN_PLANKS.get(), "orange"),
+        YELLOW(ModBlocks.YELLOW_STAINED_WOODEN_PLANKS.get(), "yellow"),
+        LIME(ModBlocks.LIME_STAINED_WOODEN_PLANKS.get(), "lime"),
+        GREEN(ModBlocks.GREEN_STAINED_WOODEN_PLANKS.get(), "green"),
+        CYAN(ModBlocks.CYAN_STAINED_WOODEN_PLANKS.get(), "cyan"),
+        LIGHT_BLUE(ModBlocks.LIGHT_BLUE_STAINED_WOODEN_PLANKS.get(), "light_blue"),
+        BLUE(ModBlocks.BLUE_STAINED_WOODEN_PLANKS.get(), "blue"),
+        PURPLE(ModBlocks.PURPLE_STAINED_WOODEN_PLANKS.get(), "purple"),
+        MAGENTA(ModBlocks.MAGENTA_STAINED_WOODEN_PLANKS.get(), "magenta"),
+        PINK(ModBlocks.PINK_STAINED_WOODEN_PLANKS.get(), "pink");
 
 
         private final String name;
