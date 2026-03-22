@@ -4,7 +4,7 @@ license="GNU GPLv3"
 
 [[mods]] #mandatory
 modId="a_palette" #mandatory
-version="0.2.0-1.21.1" #mandatory
+version="1.3.0-1.21.1" #mandatory
 displayName="Andro's Palette" #mandatory
 authors="Andro" #optional
 description='''Simple Minecraft Mod aiming to expand Block Palettes in Building!'''
